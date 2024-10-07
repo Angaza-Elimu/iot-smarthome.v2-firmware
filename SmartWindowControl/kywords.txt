@@ -1,0 +1,3 @@
+SmartWindowControl    KEYWORD1
+controlWindow         KEYWORD2
+begin                 KEYWORD3

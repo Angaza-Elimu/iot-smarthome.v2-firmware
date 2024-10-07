@@ -1,0 +1,3 @@
+RGBLEDControl   KEYWORD1
+begin           FUNCTION1
+controlRGBLED   FUNCTION2

@@ -1,0 +1,4 @@
+DHTControl          KEYWORD1
+begin               KEYWORD2
+monitorDHTSensor    KEYWORD3
+httpGETRequest      KEYWORD4
