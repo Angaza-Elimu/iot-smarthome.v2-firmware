@@ -6,7 +6,7 @@
 #define WATER_LEVEL_PIN 5 //A2
 #define LDR_PIN 6 //A3
 #define DHT_PIN 7 //A4
-#define ONBOARD_LED_PIN 4
+#define ONBOARD_LED_PIN 13
 #define BUZZER_PIN 15 //A5
 #define MQ2_PIN 34  //A8
 #define PIR_PIN 39  //D2
