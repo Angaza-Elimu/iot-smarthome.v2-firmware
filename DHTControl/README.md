@@ -19,13 +19,7 @@ Follow these steps to install the **DHTControl** library in your Arduino IDE:
 4. The library will now be available in your Arduino IDE.
 
 Alternatively, you can manually copy the unzipped folder into the `libraries` directory in your Arduino IDE installation.
-## Components used
 
-    DHT Sensor: For measuring temperature and humidity.
-    ESP32/ESP8266: Microcontroller for handling WiFi connectivity and processing.
-    OLED Display: For real-time display of temperature and humidity data.
-    WiFi Module: For connecting to a WiFi network.
-    Fan: Controlled based on the temperature thresholds set.
 ## Usage
 
 ### Basic Example
