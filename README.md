@@ -106,19 +106,9 @@ To use the firmware files and sensor libraries from this repository, follow the 
 - Rain detection (moisture sensor)
 - Light intensity monitoring (LDR sensor)
 
-## Contribution Guidelines
-
-We welcome contributions to improve this firmware! To contribute:
-- Fork the repository.
-- Make your changes in a separate branch.
-- Open a pull request to merge your changes.
-
-Feel free to submit issues or feature requests through GitHub’s issue tracker.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-Thank you for using Angaza Elimu Smarthome v2 firmware! Stay connected and feel free to contribute.
+Feel free to open an issue or submit a pull request to enhance or report problems with the **DHTControl** library.
+
+Happy Coding! 😊
