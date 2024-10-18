@@ -104,12 +104,11 @@ Access Example Files
         - Compares the current temperature to the threshold and starts/stops the fan accordingly.
         - Updates the OLED display with the latest temperature and humidity readings.
       - **Usage:** This method is typically called in the loop() function, continuously monitoring the sensor data and adjusting the fan and display as needed.
-
-    4. `httpGETRequest()`
-        ```cpp
-          String httpGETRequest(const char* serverName);
-        ```
-        
+      
+  4. `monitorDHTSensor()`
+      ```bash
+        string httpGETRequest(const char* serverName);
+      ```
         - **Purpose:** Sends an HTTP POST request to the remote server with the sensor data (temperature and humidity) and receives the server response, which contains the temperature and humidity thresholds.
         - **Parameters:**
         serverName: The URL of the server that receives the POST request.
