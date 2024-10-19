@@ -109,6 +109,6 @@ To use the firmware files and sensor libraries from this repository, follow the 
 
 ---
 
-Feel free to open an issue or submit a pull request to enhance or report problems with the **DHTControl** library.
+Feel free to open an issue or submit a pull request to enhance or report problems with the **Angaza Elimu - Smarthome** library.
 
 Happy Coding! 😊
