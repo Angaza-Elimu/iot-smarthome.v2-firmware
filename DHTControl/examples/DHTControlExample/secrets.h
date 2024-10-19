@@ -4,11 +4,13 @@
 #include "cert.h"  // Include the certificate file
 
 // WiFi credentials
-#define WIFI_SSID "wifi_name_here"
-#define WIFI_PASSWORD "wifi_password_here"
+#define WIFI_SSID "PerisH"
+#define WIFI_PASSWORD "@Queraina20"
 
 // API key for the server
-#define API_KEY "project_API_key_here"
+
+// API key for the server
+#define API_KEY "zPGuLlnrB9pSDKeZaH"
 
 // API access server URL
 const char* SERVER_URL = "https://smart-home-iot.angazaelimu.com/api/dht_data_insert";

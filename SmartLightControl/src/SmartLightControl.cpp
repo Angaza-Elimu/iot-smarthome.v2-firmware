@@ -1,3 +1,17 @@
+/*
+ * SMART LIGHT CONTROL(Source file)-------------------
+ * SmartLightControl.cpp - Implementation of SmartLightControl library
+ * Version 2.0.0
+ *
+ * This file contains the implementation of the methods used to control an LED
+ * based on platform set controls:
+ *     - Toggle ON/OFF
+ *     - Blink using platform set interval
+ *     - Schedule ON/OFF from platform using timer
+ *
+ * AMGAZA ELIMU - SH.PROJECT V2.0 / 023
+ * ----------------------------------------
+ */
 #include "SmartLightControl.h"
 
 SmartLightControl::SmartLightControl(const char* ssid, const char* password, const char* serverUrl, const char* apiKey, const char* rootCaCert, int ledPin, int onboardLedPin)

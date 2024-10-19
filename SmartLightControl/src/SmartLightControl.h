@@ -1,3 +1,13 @@
+/*
+* SMARTLIGHTS CONTROL-------------------
+* Use LED:
+*  -> Control remotely
+*     - Toggle ON/OFF
+*     - Blink using platform set interval
+*     - Schedule ON/OFF from platform using timer
+* AMGAZA ELIMU - SH.PROJECT V2.0 / 023
+* ----------------------------------------
+*/
 #ifndef SmartLightControl_h
 #define SmartLightControl_h
 
@@ -42,3 +52,6 @@ private:
 };
 
 #endif
+
+
+cREATE a README.md file for SmartLightControl library

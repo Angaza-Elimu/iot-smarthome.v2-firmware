@@ -5,6 +5,8 @@
   *
   * This file contains the implementation of the methods used to control a window
   * based on rain sensor data and timer values.
+  * Windows are closed if rain is detected or window close timer control has elapsed
+  * Windows are opened if no rain is detected or window open timer control has elapsed 
   *
   * Control window based on:
   *    -> Set timer(Opening/Closing time)
@@ -144,3 +146,6 @@ String SmartWindowControl::httpGETRequest(const char* serverName) {
 
   _https.end(); // close server connection and release memory resources
 }
+
+
+Create a SmartWindowControl monitor library using this source code. Describe key features and  library class methods in manipulating the library

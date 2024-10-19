@@ -1,5 +1,5 @@
 
-# DHTControl Library
+# Angaza Elimu Smarthome - DHTControl Library
 
 The **DHTControl** library provides functionality for monitoring temperature and humidity using a DHT sensor. It supports sending recorded data to a remote platform and controlling a fan based on temperature thresholds set remotely. Additionally, it displays the current readings on an OLED screen for real-time monitoring.
 
@@ -15,13 +15,15 @@ The **DHTControl** library provides functionality for monitoring temperature and
 
 Follow these steps to install the **DHTControl** library in your Arduino IDE:
 
-### Step 1: Clone the Repository 
+
+### Step 1: Clone the Repository
+
    Clone the `iot-smarthome.v2-firmware` repository from GitHub:
    ```bash
    git clone https://github.com/Angaza-Elimu/iot-smarthome.v2-firmware.git
    ```
    - With this approach, the whole repository files will be available on your local machine.
-   
+
 ### Step 2: Download the Library
 
 - Download the zipped file of the **DHTControl** library from the repository.
@@ -51,19 +53,23 @@ Access Example Files
 ### NOTE
   - Every `.ino` file has a `cert.h` file attached.
     - This holds server certificate for secure connection - `DO NOT` edit it
-    
+
 ### Additional Notes
 
   - **WiFi Configuration**: Ensure that you have configured the correct `ssid` and `password` values in your firmware for WiFi connectivity.
   - **Secure Communication**: This firmware supports secure HTTP communication. Make sure NOT to tamper with the provided root certificate for secure connections when required.
   - **Platform connection**: For successful platform connection, ensure to provide a valid project `API Key`(generated after new project creation).
 
+## Sensor Connection
+
+   - Configure the sensor and other control modules connection from the `pin_configuration.h` file
+
   ---
 
 ## Key Class Methods
 
   1. **Constructor:** `DHTControl()`
-    ```bash
+    ```cpp
     DHTControl(const char* ssid, const char* password, const char* serverUrl, const char* rootCert, const String& apiKey, int dhtPin, uint8_t dhtSensorType, uint8_t dispScreenW, uint8_t dispScreenH, int inaPin, int inbPin, int oledSda, int oledScl, int onboardLedPin);
     ```
     - **Purpose:** Initializes the DHTControl object with all the necessary parameters like WiFi credentials, server URL, SSL certificate, API key, and hardware pin configurations.
@@ -81,7 +87,7 @@ Access Example Files
     - `Usage:` Creates an instance of the library with all the required settings to start data monitoring and fan control.
 
   2. `begin()`
-      ```bash
+      ```cpp
         void begin();
       ```
       - **Purpose:** Initializes WiFi connectivity, configures the OLED display, and sets up pin modes for the fan control and the onboard LED.
@@ -93,7 +99,7 @@ Access Example Files
       - **Usage:** This method must be called in the setup() function of the Arduino sketch to ensure the system initializes correctly before any sensor monitoring occurs.
 
   3. `monitorDHTSensor()`
-      ```bash
+      ```cpp
         void monitorDHTSensor();
       ```
       - **Purpose:** Monitors the DHT sensor, reads temperature and humidity values, and sends the data to a remote platform. It also retrieves temperature thresholds from the server and controls the fan based on the sensor data.
@@ -104,9 +110,9 @@ Access Example Files
         - Compares the current temperature to the threshold and starts/stops the fan accordingly.
         - Updates the OLED display with the latest temperature and humidity readings.
       - **Usage:** This method is typically called in the loop() function, continuously monitoring the sensor data and adjusting the fan and display as needed.
-      
+
   4. `monitorDHTSensor()`
-      ```bash
+      ```cpp
         string httpGETRequest(const char* serverName);
       ```
         - **Purpose:** Sends an HTTP POST request to the remote server with the sensor data (temperature and humidity) and receives the server response, which contains the temperature and humidity thresholds.
@@ -123,8 +129,7 @@ Access Example Files
   - **Initialization (begin()):** Ensures WiFi connection and hardware setup, preparing the system for operation.
   - **Sensor Monitoring (monitorDHTSensor()):** Continuously monitors the sensor data, updates the display, and interacts with the server to control the fan.
   - **Data Exchange (httpGETRequest()):** Manages the data transmission between the device and the server, ensuring thresholds are dynamically updated.
-      
-  
+
   ---
 
   Feel free to open an issue or submit a pull request to enhance or report problems with the **DHTControl** library.
