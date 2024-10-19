@@ -15,7 +15,9 @@ The **DHTControl** library provides functionality for monitoring temperature and
 
 Follow these steps to install the **DHTControl** library in your Arduino IDE:
 
+
 ### Step 1: Clone the Repository
+
    Clone the `iot-smarthome.v2-firmware` repository from GitHub:
    ```bash
    git clone https://github.com/Angaza-Elimu/iot-smarthome.v2-firmware.git
@@ -58,11 +60,9 @@ Access Example Files
   - **Secure Communication**: This firmware supports secure HTTP communication. Make sure NOT to tamper with the provided root certificate for secure connections when required.
   - **Platform connection**: For successful platform connection, ensure to provide a valid project `API Key`(generated after new project creation).
 
-
 ## Sensor Connection
 
    - Configure the sensor and other control modules connection from the `pin_configuration.h` file
-
 
   ---
 
