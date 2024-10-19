@@ -28,9 +28,11 @@ This library is designed to work with ESP32 devices, leveraging its WiFi capabil
 
   ### Step 1: Clone the Repository
       Clone the `iot-smarthome.v2-firmware` repository from GitHub:
+      
       ```bash
       git clone https://github.com/Angaza-Elimu/iot-smarthome.v2-firmware.git
       ```
+      
       - With this approach, the whole repository files will be available on your local machine.
 
   ### Step 2: Download the Library
@@ -81,9 +83,11 @@ This library is designed to work with ESP32 devices, leveraging its WiFi capabil
 This class is designed to encapsulate all the logic needed for smarthome window controls and communication with a remote server.
 
 **Constructor:**
+
   ```cpp
   SmartWindowControl(const char* ssid, const char* password, const char* server_url, const char* root_cacert, const char* api_key, int servoPin, int waterLevelPin, int onboardLedPin);
   ```
+  
   - Initializes the SmartWindowControl object with WiFi credentials, server details, and pin assignments.
   - Takes input for the server's URL, root certificate, and API key for secure communication, along with pin assignments for the servo, water sensor, and onboard LED.
 
@@ -96,23 +100,29 @@ This class is designed to encapsulate all the logic needed for smarthome window 
 
     **Methods:**
       1. **begin()**
+      
               ```cpp
                 void SmartWindowControl::begin();
               ```
+              
               - Initializes the servo motor for controlling the window, sets up the rain and water sensors, and connects the system to the specified WiFi network.
               - It also sets up secure communication with the server using the root certificate for HTTPS.
 
         2. **controlWindow()**
+        
                 ```cpp
                 void SmartWindowControl::controlWindow();
                 ```
+                
                 - Reads the water level sensor and requests rain sensor data from the server. Based on the sensor readings and thresholds, this method controls whether the window should open or close.
                 - It moves the servo to adjust the window's position, using a smooth movement by incrementally rotating the servo from 0° to 180° (or vice versa).
 
         3. **httpGETRequest(const char serverName)**
+        
                 ```cpp
                 String SmartWindowControl::httpGETRequest(const char* serverName);
                 ```
+                
                 - This method sends a POST request to the server with sensor data (water level and rain sensor state) and receives the server’s response containing window control parameters (rain threshold and window state).
                 - The server response is then parsed and used in the controlWindow() method to determine the window's action.
 
