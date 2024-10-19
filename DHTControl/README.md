@@ -19,6 +19,7 @@ Follow these steps to install the **DHTControl** library in your Arduino IDE:
 ### Step 1: Clone the Repository
 
    Clone the `iot-smarthome.v2-firmware` repository from GitHub:
+   
    ```bash
    git clone https://github.com/Angaza-Elimu/iot-smarthome.v2-firmware.git
    ```
@@ -69,6 +70,7 @@ Access Example Files
 ## Key Class Methods
 
   1. **Constructor:** `DHTControl()`
+
     ```cpp
     DHTControl(const char* ssid, const char* password, const char* serverUrl, const char* rootCert, const String& apiKey, int dhtPin, uint8_t dhtSensorType, uint8_t dispScreenW, uint8_t dispScreenH, int inaPin, int inbPin, int oledSda, int oledScl, int onboardLedPin);
     ```
@@ -86,7 +88,7 @@ Access Example Files
       - `onboardLedPin:` Pin for controlling an onboard LED.
     - `Usage:` Creates an instance of the library with all the required settings to start data monitoring and fan control.
 
-  2. `begin()`
+  3. `begin()`
       ```cpp
         void begin();
       ```
@@ -98,7 +100,7 @@ Access Example Files
         - Sets the SSL certificate for secure HTTPS communication.
       - **Usage:** This method must be called in the setup() function of the Arduino sketch to ensure the system initializes correctly before any sensor monitoring occurs.
 
-  3. `monitorDHTSensor()`
+  4. `monitorDHTSensor()`
       ```cpp
         void monitorDHTSensor();
       ```
@@ -111,7 +113,7 @@ Access Example Files
         - Updates the OLED display with the latest temperature and humidity readings.
       - **Usage:** This method is typically called in the loop() function, continuously monitoring the sensor data and adjusting the fan and display as needed.
 
-  4. `monitorDHTSensor()`
+  5. `monitorDHTSensor()`
       ```cpp
         string httpGETRequest(const char* serverName);
       ```
