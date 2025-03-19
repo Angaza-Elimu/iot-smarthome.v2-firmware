@@ -146,6 +146,3 @@ String SmartWindowControl::httpGETRequest(const char* serverName) {
 
   _https.end(); // close server connection and release memory resources
 }
-
-
-Create a SmartWindowControl monitor library using this source code. Describe key features and  library class methods in manipulating the library
